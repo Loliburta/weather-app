@@ -11,7 +11,8 @@ import { ReactComponent as Thunderstorm } from "./assets/thunderstorm.svg";
 
 const api = {
   key: "0547d2585fd23e3154fcf7635e308295",
-  base: "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/",
+  base:
+    "https://api.openweathermap.org/data/2.5/",
 };
 
 function App() {
@@ -36,7 +37,10 @@ function App() {
   const [temp3Min, setTemp3Min] = useState();
   const [temp3Max, setTemp3Max] = useState();
   const [day3, setDay3] = useState();
-  var tl = gsap.timeline();
+
+  let tl = gsap.timeline();
+  const divRef = useRef();
+  
   useEffect(() => {
     TweenLite.from(".search-box", {
       y: 30,
@@ -46,7 +50,6 @@ function App() {
     });
     console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa");
   }, []);
-  const divRef = useRef();
   useEffect(() => {
     if (divRef.current != undefined && !tl.isActive()) {
       TweenLite.set(divRef.current, { visibility: "visible" });
@@ -71,16 +74,13 @@ function App() {
         );
       }
       if (document.getElementsByClassName(".main-icon") !== undefined) {
-        tl.from(
-          ".main-icon",
-          {
-            duration: 1.5,
-            x: -200,
-            autoAlpha: 0,
-            ease: Power3.easeOut,
-          },
-          "-=1.5"
-        );
+        tl.from(".main-icon", {
+          duration: 1.5,
+          x: -200,
+          autoAlpha: 0,
+          ease: Power3.easeOut,
+          scale: 0.1,
+        });
       }
 
       console.log("animacja2");
@@ -252,7 +252,7 @@ function App() {
               <div className="weather-box">
                 <div className="temperature" id="temperature">
                   <div className="main-forecast">
-                    <span className="main-icon">{weatherIcon}</span>
+                    <div className="main-icon">{weatherIcon}</div>
                     <div className="test1">
                       <p className="weather-condition">
                         {weather.weather[0].description}
@@ -330,7 +330,7 @@ function App() {
                 <div className="weather-box">
                   <div className="temperature">
                     <div className="main-forecast">
-                      {weatherIcon}
+                      <div className="main-icon">{weatherIcon}</div>
                       <div className="test1">
                         <p className="weather-condition">
                           {weather.weather[0].description}
