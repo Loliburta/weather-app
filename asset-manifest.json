@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.cef9ebe9.chunk.css",
+    "main.css": "/weather-app/static/css/main.6d75f606.chunk.css",
     "main.js": "/weather-app/static/js/main.f430b8ea.chunk.js",
     "main.js.map": "/weather-app/static/js/main.f430b8ea.chunk.js.map",
     "runtime-main.js": "/weather-app/static/js/runtime-main.97fb8f1d.js",
@@ -10,7 +10,7 @@
     "static/js/3.26f2bb0a.chunk.js": "/weather-app/static/js/3.26f2bb0a.chunk.js",
     "static/js/3.26f2bb0a.chunk.js.map": "/weather-app/static/js/3.26f2bb0a.chunk.js.map",
     "index.html": "/weather-app/index.html",
-    "static/css/main.cef9ebe9.chunk.css.map": "/weather-app/static/css/main.cef9ebe9.chunk.css.map",
+    "static/css/main.6d75f606.chunk.css.map": "/weather-app/static/css/main.6d75f606.chunk.css.map",
     "static/js/2.8a29e7c6.chunk.js.LICENSE.txt": "/weather-app/static/js/2.8a29e7c6.chunk.js.LICENSE.txt",
     "static/media/atmosphere.63d5681c.svg": "/weather-app/static/media/atmosphere.63d5681c.svg",
     "static/media/index.css": "/weather-app/static/media/warm.af44cb54.svg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.97fb8f1d.js",
     "static/js/2.8a29e7c6.chunk.js",
-    "static/css/main.cef9ebe9.chunk.css",
+    "static/css/main.6d75f606.chunk.css",
     "static/js/main.f430b8ea.chunk.js"
   ]
 }
